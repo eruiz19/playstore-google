@@ -44,18 +44,27 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[ 'nombre'=>'required', 'precio'=>'required', 'logo'=>'required', 'descripcion'=>'required', 'categoria'=>'required']);
+        $this->validate($request, [ 'name'=>'required|max:50', 'price'=>'required', 'picture'=>'required', 'description'=>'required|max:150', 'category_id'=>'required']);
+
         $app = App::create($request->all());
 
-        /*$categorias = $request->get('categoria');
-        foreach ($categorias as $categoria) {
-            $app->category()->attach($categoria);
-        }*/
+        //dd ($app);
 
-        $categorias = $request->get('categoria');
-        if ($categorias) {
-            $app->category()->sync($categorias);
+        //$categorias = $request->input('category_id');
+
+        //$categorias = $request['category_id'];
+
+        //dd($categorias);
+
+        /*foreach ($categorias as $categoria) {
+
+                $app->category()->attach($categoria);
         }
+
+        /*$categorias = $request->input('category_id');
+        if ($categorias) {
+            $app->category()->attach($categorias);
+        }*/
         
         return redirect()->route('developer.index')->with('success','Registro creado satisfactoriamente');
     }
@@ -96,7 +105,7 @@ class DeveloperController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->validate($request,[ 'nombre'=>'required', 'precio'=>'required', 'logo'=>'required', 'descripcion'=>'required', 'categoria'=>'required']);
+        $this->validate($request,[ 'price'=>'required', 'picture'=>'required', 'description'=>'required|max:150']);
 
         App::find($id)->update($request->all());
         return redirect()->route('developer.index')->with('success','Registro actualizado satisfactoriamente');

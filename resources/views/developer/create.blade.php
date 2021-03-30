@@ -31,28 +31,28 @@
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre de la app">
+										<input type="text" name="name" id="nombre" class="form-control input-sm" placeholder="Nombre de la app">
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="precio" id="precio" class="form-control input-sm" placeholder="Ingrese precio">
+										<input type="text" name="price" id="precio" class="form-control input-sm" placeholder="Ingrese precio">
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<input type="text" name="logo" id="logo" class="form-control input-sm" placeholder="Nombre de la imagen o logo">
+								<input type="text" name="picture" id="logo" class="form-control input-sm" placeholder="Nombre de la imagen o logo">
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<textarea name="descripcion" class="form-control input-sm" placeholder="Descripción"></textarea>
+										<textarea name="description" class="form-control input-sm" placeholder="Descripción"></textarea>
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="categoria" id="categoria" class="form-control input-sm" placeholder="Nombre de la categoria">
+										<input type="text" name="category_id" id="categoria" class="form-control input-sm" placeholder="Ingrese id de categoria">
 									</div>
 								</div>
 							</div>

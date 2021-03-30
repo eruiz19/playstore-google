@@ -14,6 +14,8 @@ class Category extends Model
 
  	public function apps()
  	{
- 		return $this->hasMany('App\App')->withTimestamps();
+ 		//return $this->hasMany('App\App')->withTimestamps();
+
+ 		return $this->hasMany('App\App');
  	}
 }

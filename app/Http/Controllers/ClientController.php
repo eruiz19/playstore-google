@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Category;
+
 class ClientController extends Controller
 {
     
@@ -19,7 +21,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        $categorias=Category::orderBy('id', 'DESC')->paginate(3);
+        return view('client.index',compact('categorias'));
     }
 
     /**

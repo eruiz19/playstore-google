@@ -21,7 +21,7 @@
 
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nueva App</h3>
+					<h3 class="panel-title">Editar App</h3>
 				</div>
 				<div class="panel-body">					
 					<div class="table-container">
@@ -29,32 +29,35 @@
 							{{ csrf_field() }}
 							<input name="_method" type="hidden" value="PATCH">
 							<div class="row">
-								<div class="col-xs-6 col-sm-6 col-md-6">
+								<!-- <div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="nombre" id="nombre" class="form-control input-sm" value="{{$app->name}}">
+										<input type="text" name="name" id="nombre" class="form-control input-sm" value="{{$app->name}}">
 									</div>
-								</div>
+								</div> -->
 								<div class="col-xs-6 col-sm-6 col-md-6">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">Precio</label>
 									<div class="form-group">
-										<input type="text" name="precio" id="precio" class="form-control input-sm" value="{{$app->price}}">
+										<input type="text" name="price" id="precio" class="form-control input-sm" value="{{$app->price}}">
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">Imagen</label>
 									<div class="form-group">
-										<input type="text" name="logo" id="logo" class="form-control input-sm" value="{{$app->picture}}">
+										<input type="text" name="picture" id="logo" class="form-control input-sm" value="{{$app->picture}}">
 									</div>
 								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6">
+								<!-- <div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="categoria" id="categoria" class="form-control input-sm" value="{{$app->category_id}}">
-									</div>
+										<input type="text" name="category_id" id="categoria" class="form-control input-sm" value="{{$app->category_id}}">
+									</div> -->
 								</div>
 							</div>
 							<div class="form-group">
-								<textarea name="descripcion" class="form-control input-sm" placeholder="Descripción">{{$app->description}}</textarea>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción</label>
+								<textarea name="description" class="form-control input-sm" placeholder="Descripción">{{$app->description}}</textarea>
 							</div>
 							<div class="row">
 
