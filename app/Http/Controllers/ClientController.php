@@ -21,7 +21,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $categorias=Category::orderBy('id', 'DESC')->paginate(3);
+        $categorias=Category::orderBy('id', 'ASC')->paginate(3);
+
+        //dd($categorias);
         return view('client.index',compact('categorias'));
     }
 

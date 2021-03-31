@@ -44,7 +44,10 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [ 'name'=>'required|max:50', 'price'=>'required', 'picture'=>'required', 'description'=>'required|max:150', 'category_id'=>'required']);
+        /*'price'=>'required|numeric|regex:/^[\d]{0,5}(\.[\d]{1,2})?$/'
+        Acepta un numero entero de maximo 5 digitos con decimales opcionales 1 o 2 como maximo*/
+
+        $this->validate($request, [ 'name'=>'required|unique:apps,name|max:50', 'price'=>'required|numeric|regex:/^[\d]{0,5}(\.[\d]{1,2})?$/', 'picture'=>'required', 'description'=>'required|max:150', 'category_id'=>'required']);
 
         $app = App::create($request->all());
 
